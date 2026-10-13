@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { 
   Users, 
   Receipt, 
@@ -358,13 +359,13 @@ export function InteractiveHeroPulse() {
           <span className="font-semibold text-slate-700 dark:text-slate-300">DEMO INTEGRITY:</span>
           <span>Sample organizations and metrics are demonstrational prototypes.</span>
         </div>
-        <a 
+        <Link 
           href="/dashboard"
           className="font-medium text-blue-600 dark:text-cyan-400 hover:underline flex items-center gap-1"
         >
           <span>Open Full Client Workspace</span>
           <ArrowRight className="w-3 h-3" />
-        </a>
+        </Link>
       </div>
     </div>
   );

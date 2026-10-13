@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { InteractiveHeroPulse } from '@/components/InteractiveHeroPulse';
 import { 
   VERIFIED_SERVICES, 
@@ -87,21 +88,21 @@ export default function HomePage() {
 
             {/* Primary & Secondary Actions */}
             <div className="mt-7 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-              <a
+              <Link
                 href="/start"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold bg-[#102d73] hover:bg-[#0c2258] text-white shadow-md hover:shadow-lg transition-all"
               >
                 <span>Book a Consultation</span>
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/dashboard"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold bg-white dark:bg-white/5 hover:bg-slate-50 dark:hover:bg-white/10 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-white/10 transition-all shadow-xs"
               >
                 <span>Explore Client Workspace</span>
                 <ChevronRight className="w-4 h-4 text-slate-400" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -167,13 +168,13 @@ export default function HomePage() {
                 Multidisciplinary Solutions for Nigerian Enterprises
               </h2>
             </div>
-            <a
+            <Link
               href="/services"
               className="text-xs font-semibold text-blue-600 dark:text-cyan-400 hover:underline flex items-center gap-1"
             >
               <span>Explore All 7 Services in Depth</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -215,19 +216,19 @@ export default function HomePage() {
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-slate-100 dark:border-white/5 flex items-center justify-between">
-                    <a
+                    <Link
                       href={`/services/${s.slug}`}
                       className="text-xs font-semibold text-slate-900 dark:text-slate-200 hover:text-blue-600 dark:hover:text-cyan-400 flex items-center gap-1"
                     >
                       <span>Service Details</span>
                       <ChevronRight className="w-3.5 h-3.5" />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href={`/start?service=${s.id}`}
                       className="text-xs font-medium px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-cyan-400 hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors"
                     >
                       Start Scope
-                    </a>
+                    </Link>
                   </div>
                 </div>
               );
@@ -324,13 +325,13 @@ export default function HomePage() {
                   Start an intake now or explore with preloaded client scenarios.
                 </p>
               </div>
-              <a
+              <Link
                 href="/start"
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 dark:text-cyan-300 hover:underline pt-3"
               >
                 <span>Launch Intake Wizard</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -499,21 +500,21 @@ export default function HomePage() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a
+            <Link
               href="/start"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold bg-white text-[#102d73] hover:bg-blue-50 shadow-lg hover:shadow-xl transition-all"
             >
               <span>Book a Consultation / Start Scoping</span>
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/dashboard"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all"
             >
               <span>Explore Client Workspace (Concept)</span>
               <ChevronRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
 
           <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs text-blue-200/80">

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { notFound, useParams } from 'next/navigation';
 import { VERIFIED_SERVICES, BENRESA_LEGAL_ENTITY } from '@/data/benresa-verified';
 import { 
@@ -44,13 +45,13 @@ export default function ServiceDetailPage() {
         <p className="text-sm text-slate-500 mt-2">
           The requested service "{slug}" is not indexed in Benresa's verified taxonomy.
         </p>
-        <a 
+        <Link 
           href="/services" 
           className="mt-6 inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-blue-600 text-white text-xs font-semibold"
         >
           <ChevronLeft className="w-4 h-4" />
           <span>Back to Services Catalog</span>
-        </a>
+        </Link>
       </div>
     );
   }
@@ -61,13 +62,13 @@ export default function ServiceDetailPage() {
     <div className="py-12 md:py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Back Link */}
-        <a 
+        <Link 
           href="/services" 
           className="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 mb-6 transition-colors"
         >
           <ChevronLeft className="w-4 h-4" />
           <span>Back to Services Catalog</span>
-        </a>
+        </Link>
 
         {/* Hero Card */}
         <div className="fintech-panel-elevated p-6 sm:p-8 md:p-10 bg-white dark:bg-[#0c1427] mb-10">
@@ -177,13 +178,13 @@ export default function ServiceDetailPage() {
               Launch our interactive 7-step wizard to configure your organizational requirements, inspect readiness, and receive a statement of work.
             </p>
           </div>
-          <a
+          <Link
             href={`/start?service=${service.id}`}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#102d73] text-xs font-bold shadow-md hover:bg-blue-50 transition-colors shrink-0"
           >
             <span>Proceed to Intake Wizard</span>
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

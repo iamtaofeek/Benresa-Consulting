@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/navigation';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTheme } from '@/context/ThemeContext';
 import { useDemoWorkspace } from '@/context/DemoWorkspaceContext';
@@ -92,7 +92,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo & Tagline */}
           <div suppressHydrationWarning className="flex items-center gap-6 lg:gap-8 shrink-0">
-            <a href="/" className="flex items-center gap-3 group shrink-0">
+            <Link href="/" className="flex items-center gap-3 group shrink-0">
               <div className="h-10 px-2.5 py-1 bg-white rounded-lg border border-slate-200 dark:border-white/20 shadow-xs flex items-center shrink-0">
                 {/* Authentic Logo */}
                 <img
@@ -109,7 +109,7 @@ export function Navbar() {
                   Business & People Advisory
                 </div>
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Navigation Links */}
             <nav className="hidden md:flex items-center gap-1">
@@ -119,7 +119,7 @@ export function Navbar() {
                 onMouseEnter={() => setServicesDropdownOpen(true)}
                 onMouseLeave={() => setServicesDropdownOpen(false)}
               >
-                <a
+                <Link
                   href="/services"
                   className={`inline-flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                     pathname.startsWith('/services') 
@@ -129,7 +129,7 @@ export function Navbar() {
                 >
                   <span>Services</span>
                   <ChevronDown className="w-3.5 h-3.5 opacity-70" />
-                </a>
+                </Link>
 
                 {servicesDropdownOpen && (
                   <div className="absolute left-0 mt-1 w-80 bg-white dark:bg-[#0c1427] border border-slate-200 dark:border-white/10 rounded-xl shadow-xl p-2 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
@@ -137,7 +137,7 @@ export function Navbar() {
                       Verified Sourced Capabilities
                     </div>
                     {VERIFIED_SERVICES.map((s) => (
-                      <a
+                      <Link
                         key={s.id}
                         href={`/services/${s.slug}`}
                         className="flex flex-col px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-white/5 transition-colors group"
@@ -148,23 +148,23 @@ export function Navbar() {
                         <span className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1">
                           {s.shortDesc}
                         </span>
-                      </a>
+                      </Link>
                     ))}
                     <div className="mt-1 pt-1 border-t border-slate-100 dark:border-white/5">
-                      <a
+                      <Link
                         href="/services"
                         className="flex items-center justify-between px-3 py-2 text-xs font-semibold text-blue-600 dark:text-cyan-400 hover:underline"
                       >
                         <span>View All Services Catalog</span>
                         <ArrowRight className="w-3.5 h-3.5" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 )}
               </div>
 
               {/* Workspace Navigation */}
-              <a
+              <Link
                 href="/dashboard"
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   pathname === '/dashboard' 
@@ -173,9 +173,9 @@ export function Navbar() {
                 }`}
               >
                 Client Workspace
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/operations"
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   pathname === '/operations' 
@@ -184,9 +184,9 @@ export function Navbar() {
                 }`}
               >
                 Operations Hub
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/quality"
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   pathname === '/quality' 
@@ -195,9 +195,9 @@ export function Navbar() {
                 }`}
               >
                 Quality Review
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/case-study"
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
                   pathname === '/case-study' 
@@ -206,7 +206,7 @@ export function Navbar() {
                 }`}
               >
                 Behind Concept
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -301,13 +301,13 @@ export function Navbar() {
             </button>
 
             {/* Primary Action Button */}
-            <a
+            <Link
               href="/start"
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-semibold rounded-lg bg-[#102d73] hover:bg-[#0c2258] text-white shadow-sm transition-all"
             >
               <span>Consultation</span>
               <ArrowRight className="w-3.5 h-3.5 hidden sm:inline" />
-            </a>
+            </Link>
 
             {/* Mobile Hamburger Toggle */}
             <button
@@ -324,55 +324,55 @@ export function Navbar() {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-slate-200 dark:border-white/10 bg-white dark:bg-[#070d1a] px-4 pt-3 pb-6 space-y-2 animate-in slide-in-from-top-2 duration-150">
-          <a
+          <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-white/5"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/services"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-white/5"
           >
             Services Catalog
-          </a>
-          <a
+          </Link>
+          <Link
             href="/dashboard"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-white/5"
           >
             Client Workspace
-          </a>
-          <a
+          </Link>
+          <Link
             href="/operations"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-white/5"
           >
             Operations Hub
-          </a>
-          <a
+          </Link>
+          <Link
             href="/quality"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-white/5"
           >
             Deliverable QC Review
-          </a>
-          <a
+          </Link>
+          <Link
             href="/analytics"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-white/5"
           >
             Intelligence & Reports
-          </a>
-          <a
+          </Link>
+          <Link
             href="/case-study"
             onClick={() => setMobileMenuOpen(false)}
             className="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-white/5"
           >
             Behind the Concept
-          </a>
+          </Link>
 
           <div className="pt-3 border-t border-slate-100 dark:border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-2">

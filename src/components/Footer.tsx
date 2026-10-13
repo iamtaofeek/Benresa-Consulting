@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { BENRESA_LEGAL_ENTITY, VERIFIED_SERVICES } from '@/data/benresa-verified';
 import { useDemoWorkspace } from '@/context/DemoWorkspaceContext';
 import { useTheme } from '@/context/ThemeContext';
@@ -75,12 +76,12 @@ export function Footer() {
             <ul className="space-y-2 text-xs">
               {VERIFIED_SERVICES.map((s) => (
                 <li key={s.id}>
-                  <a 
+                  <Link 
                     href={`/services/${s.slug}`}
                     className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
                   >
                     {s.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -93,34 +94,34 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="/dashboard" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
+                <Link href="/dashboard" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
                   Client Overview Dashboard
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/start" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
+                <Link href="/start" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
                   7-Step Intake & Scoping
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/operations" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
+                <Link href="/operations" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
                   Internal Consulting Ops
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/quality" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
+                <Link href="/quality" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
                   Deliverable QC & Verification
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/analytics" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
+                <Link href="/analytics" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
                   Operations Intelligence
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/case-study" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
+                <Link href="/case-study" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400">
                   Architecture Case Study
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
