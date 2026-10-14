@@ -61,12 +61,10 @@ export default function HomePage() {
 
             {/* Headline */}
             <h1
-              className="big-text font-bold tracking-tight text-center mx-auto text-slate-900 dark:text-[rgb(245,247,250)]"
+              className="big-text font-bold tracking-tight text-center mx-auto text-slate-900 dark:text-[rgb(245,247,250)] max-w-5xl px-2 sm:px-4"
               style={{
                 fontFamily: 'Manrope, "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif',
-                fontSize: '88px',
                 fontWeight: 700,
-                lineHeight: '92.4px',
               }}
             >
               CLARITY FOR EVERY <br className="hidden sm:inline" />
@@ -75,12 +73,10 @@ export default function HomePage() {
 
             {/* Subline */}
             <p
-              className="small-text mt-6 leading-relaxed max-w-3xl mx-auto text-center text-slate-600 dark:text-[rgb(167,175,188)]"
+              className="small-text mt-5 sm:mt-6 leading-relaxed max-w-3xl mx-auto text-center text-slate-600 dark:text-[rgb(167,175,188)] px-2 sm:px-4"
               style={{
                 fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                fontSize: '21.6px',
                 fontWeight: 400,
-                lineHeight: '33.48px',
               }}
             >
               Expert support across human resources, talent acquisition, tax compliance, and strategic management — redesigned for a connected, transparent client operations experience.
@@ -474,25 +470,22 @@ export default function HomePage() {
           </span>
 
           <h2
-            className="big-text font-bold tracking-tight"
+            className="big-text font-bold tracking-tight text-center mx-auto max-w-5xl px-2 sm:px-4"
             style={{
               fontFamily: 'Manrope, "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif',
-              fontSize: '88px',
               fontWeight: 700,
-              lineHeight: '92.4px',
               color: 'rgb(245, 247, 250)',
             }}
           >
-            LET'S MAKE THE NEXT STEP CLEAR.
+            LET&apos;S MAKE THE NEXT <br className="hidden sm:inline" />
+            STEP CLEAR.
           </h2>
 
           <p
-            className="small-text mt-6 leading-relaxed max-w-3xl mx-auto"
+            className="small-text mt-5 sm:mt-6 leading-relaxed max-w-3xl mx-auto px-2 sm:px-4"
             style={{
               fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-              fontSize: '21.6px',
               fontWeight: 400,
-              lineHeight: '33.48px',
               color: 'rgb(167, 175, 188)',
             }}
           >
